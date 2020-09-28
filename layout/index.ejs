@@ -1,0 +1,27 @@
+<div id="home-head">
+
+    <div id="home-info" class="home-info">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1><%- config.title %></h1>
+                <h3><%- config.subtitle %></h3>
+                <h5><%- config.description %></h5>
+            </div>
+        </span>
+    </div>
+
+</div>
+
+<div id="home-posts-wrap">
+    <div id="home-posts">
+        
+        <%- include("posts") %> 
+
+        <%- include("current") %> 
+
+    </div>
+</div>

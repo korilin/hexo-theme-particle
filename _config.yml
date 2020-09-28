@@ -1,0 +1,49 @@
+# html lang
+language: zh
+
+# main menu navigation
+# icon use ionicons
+# Link：https://ionicons.com/
+menu:
+  主页:
+    icon: home
+    src: /
+  关于:
+    icon: person
+    src: /about
+
+link:
+  Github:
+    icon: /icon/github.png
+    src:
+  Twitter:
+    icon: /icon/twitter.png
+    src:
+
+tags_color:
+  - ffa2c4
+  - 00bcd4
+  - 03a9f4
+  - 00a596
+  - ff7d73
+
+home_img: /home_bg.jpg
+
+footer:
+  since: 2018
+
+
+highlight:
+  enable: true
+  style: tomorrow
+
+prism:
+  enable: false
+
+# stylesheets loaded in the <head>
+stylesheets:
+  - /css/main.css
+
+# scripts loaded in the end of the body
+scripts:
+  - /js/particle.js

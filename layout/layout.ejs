@@ -1,0 +1,43 @@
+<% 
+    var pageTitle = config.title+' || '
+    if(page.title) pageTitle+=page.title;
+    else if(is_category()) pageTitle+=page.category;
+    else if(is_tag()) pageTitle+=page.tag;
+    else pageTitle+=config.subtitle;
+
+    var layout = "index"
+    if(is_home()){
+        layout = "index"
+    }else if(is_post()){
+        layout = "post"
+    }else if(is_category()){
+        layout = "categories"
+    }else if(is_tag()){
+        layout = "tags"
+    }else if(is_archive()){
+        layout = "archives"
+    }
+%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+    <meta name="description" content="<%- config.description %> ">
+    <% theme.stylesheets.forEach(url => { %>
+    <link rel="stylesheet" href="<%=url%>">
+    <% }); %>
+    <script type="module" src="/js/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="/js/ionicons.js"></script>
+</head>
+
+<body>
+
+    <%- include("menu") %>
+    <%- include(layout) %>
+    <%- include("footer") %>
+</body>
+
+</html>

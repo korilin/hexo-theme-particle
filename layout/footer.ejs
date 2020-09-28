@@ -1,0 +1,20 @@
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © <%= theme.footer.since %> - <%- date(Date.now(), 'YYYY') %>
+            <ion-icon style="color: #66afef; margin: 0 5px" name="planet"></ion-icon>
+            @ <%- config.author %>
+        </div>
+        <div></div>
+        <div>基于 Hexo & Particle 主题</div>
+    </div>
+
+</footer>
+
+<script src="/js/particle.js"></script>
+<!-- code high light -->
+<% if(theme.highlight.enable==true){ %>
+<script src="/js/highlight.min.js"></script>
+<link rel="stylesheet" href="/css/highlight/<%= theme.highlight.style %>.css">
+<script>hljs.initHighlightingOnLoad();</script>
+<% } %>

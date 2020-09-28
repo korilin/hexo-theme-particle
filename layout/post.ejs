@@ -1,0 +1,38 @@
+<div class="content">
+    <div class="category-and-date">
+        <% if(page.categories.data.length!=0){ %>
+        <span class="category">
+            <a href="/categories/<%= page.categories.data[0].name %>">
+                <ion-icon name="layers"></ion-icon>
+                <%- page.categories.data[0].name %>
+            </a>
+        </span>
+
+        <% } %>
+        <span class="date">
+            <ion-icon name="calendar-outline"></ion-icon>
+            <%- date(page.date, 'YYYY/M/D') %>
+        </span>
+    </div>
+    <div class="post-tags">
+        <% if(page.tags.data.length!=0){ %>
+        <span class="tag">
+            <ion-icon name="pricetags"></ion-icon>
+        </span>
+        <% } %>
+        <% page.tags.data.forEach(function(data){%>
+        <span class="tag">
+            <% var num = Math.floor(Math.random()*theme.tags_color.length) %>
+            <a name="/tags/<%= data.name %>" style="color: #<%- theme.tags_color[num] %> ">
+                <%- data.name %>
+            </a>
+        </span>
+        <% }) %>
+    </div>
+    <div class="excerpt">
+        <div class="content">
+            <%- page.content %>
+        </div>
+    </div>
+
+</div>
