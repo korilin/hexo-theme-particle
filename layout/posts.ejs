@@ -1,5 +1,5 @@
-<% var current = (page.current-1)*10; %>
-<% site.posts.slice(0+current,10+current).forEach(function(post){ %>
+<% var current = (page.current-1)*config.index_generator.per_page; %>
+<% site.posts.slice(0+current,config.index_generator.per_page+current).forEach(function(post){ %>
 <div class="post">
 
     <a href="/<%- post.path %>">
@@ -46,16 +46,15 @@
         <% post.tags.data.forEach(function(data){%>
         <span class="tag">
             <% var num = Math.floor(Math.random()*theme.tags_color.length) %>
-            <a name="/tags/<%= data.name %>" style="color: #<%- theme.tags_color[num] %> ">
+            <a href="/tags/<%= data.name %>" style="color: #<%- theme.tags_color[num] %> ">
                 <%- data.name %>
             </a>
         </span>
         <% }) %>
     </div>
 
-    <a class="go-post">
+    <a href="/<%- post.path %> " class="go-post">
         阅读全文
     </a>
-
 </div>
 <% }); %>

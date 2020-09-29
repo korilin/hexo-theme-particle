@@ -1,19 +1,9 @@
-
-var homeInfo = document.getElementById("home-info");
-
-homeInfo.addEventListener('click', function () {
-    window.scrollTo({
-        top: window.innerHeight,
-        behavior: "smooth",
-    });
-})
-
-
 var barLocal = document.documentElement.scrollTop
 window.addEventListener('scroll', function (e) {
     var newLocal = document.documentElement.scrollTop
     var menu = document.getElementById("menu")
     var home_posts = document.getElementById("home-posts")
+
     if (barLocal < newLocal) {
         menu.className = "hidden-menu"
     } else {
@@ -29,8 +19,14 @@ window.addEventListener('scroll', function (e) {
     barLocal = newLocal
 })
 
-var footer = document.getElementById("footer");
-var postsHeight = document.getElementById("home-posts-wrap").offsetHeight
-var headHeight = window.innerHeight
-var footerLocation = postsHeight + headHeight;
-footer.style = "top:" + footerLocation + "px"
+
+hljs.initHighlightingOnLoad();
+var pre_blocks = document.getElementsByTagName("pre")
+for (var i = 0; i < pre_blocks.length; i++) {
+    var code_block_class = pre_blocks[i].firstChild.className
+    var language = code_block_class.substring(9,)
+    if (language == "") language = "Text"
+    var language_html = "<div class='language'>" + language + "</div>"
+    pre_blocks[i].innerHTML += language_html
+}
+

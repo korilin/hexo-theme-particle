@@ -1,0 +1,85 @@
+
+.content
+    @font-face
+        font-family 'Cascadia'
+        src url('../fonts/Cascadia.ttf')
+
+    code
+        font-family Cascadia
+        background #bddcf76b
+        padding 4px 8px
+        border-radius 4px
+        font-size 14px
+        color #4b616b
+
+    pre
+        // background rgba(212, 235, 255, 0.161)
+        box-shadow 0 2px 12px 0 rgba(0, 0, 0, 0.1)
+        border 1px solid #ebeef5
+        padding 50px 30px 20px
+        margin 25px 0
+        border-radius 15px
+        overflow auto
+        color #4d4d4c
+        position relative
+
+        code
+            background none
+            padding 0
+
+    h1, h2, h3, h4, h5
+        text-align left !important
+        margin 18px 0
+
+    a
+        color #66afef
+        text-decoration none
+
+    .markdownIt-Anchor
+        display none
+
+    .language
+        font-family Cascadia
+        position absolute
+        top 0
+        right 80px
+        padding 10px 15px
+        background linear-gradient(to right, #ed6ea0 0, #ec8c69 100%)
+        box-shadow 0 0 0.75rem var(--color-pink-a3)
+        color white
+        font-weight bold
+        font-size 12px
+        border-radius 0 0 10px 10px
+
+    .hljs
+        font-family Cascadia
+        background none
+        line-height 2
+        font-size 13px
+
+        .hljs-built_in
+            color #42a4d6
+
+        .hljs-keyword
+            color #e24279
+
+        .hljs-literal, .hljs-number
+            color #FF9800
+
+        .hljs-doctag, .hljs-string
+            color #009688
+
+        .hljs-comment, .hljs-quote
+            color #9E9E9E
+
+        .hljs-attribute, .hljs-name
+            color red
+
+        .hljs-attr
+            color #525252
+
+        .hljs-class, .hljs-title, .hljs-type
+            color #3f51b5
+
+        .hljs-params, .hljs-variable
+            color #458

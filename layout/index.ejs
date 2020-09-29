@@ -13,15 +13,25 @@
             </div>
         </span>
     </div>
+    <script>
+        var homeInfo = document.getElementById("home-info");
 
+        homeInfo.addEventListener('click', function () {
+            window.scrollTo({
+                top: window.innerHeight,
+                behavior: "smooth",
+            });
+        })
+
+    </script>
 </div>
 
 <div id="home-posts-wrap">
     <div id="home-posts">
-        
-        <%- include("posts") %> 
 
-        <%- include("current") %> 
+        <%- include("posts") %>
+
+        <%- include("current") %>
 
     </div>
 </div>

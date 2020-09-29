@@ -1,0 +1,190 @@
+highlight-background = #d4ebff29
+highlight-current-line = #efefef
+highlight-selection = #d6d6d6
+highlight-foreground = #4d4d4c
+highlight-comment = #8e908c
+highlight-red = #f2777a
+highlight-orange = #f99157
+highlight-yellow = #ffcc66
+highlight-green = #99cc99
+highlight-aqua = #66cccc
+highlight-blue = #6699cc
+highlight-purple = #cc99cc
+$color-1 = #333
+$color-2 = #279c81ad
+$color-3 = #df5000
+$color-4 = #d73a49
+$color-5 = #0086b3
+$color-6 = #63a35c
+$color-7 = #6f42c1
+$color-8 = #55a532
+$color-9 = #eaffea
+$color-10 = #bd2c00
+$color-11 = #ffecec
+$color-12 = #005cc5
+$color-13 = #008e32
+
+$code-block
+    background highlight-background
+    box-shadow 0 2px 12px 0 rgba(0, 0, 0, 0.1)
+    border 1px solid #ebeef5
+    padding 1.5rem
+    margin 1.5rem 0
+    border-radius 0.8rem
+    overflow auto
+    color highlight-foreground
+
+$line-numbers
+    color highlight-comment
+
+.content
+    @font-face
+        font-family 'Cascadia'
+        src url('../fonts/Cascadia.ttf')
+
+    pre, code
+        font-family Cascadia !important
+        text-shadow none
+        font-size 0.9em
+
+    .md
+        line-height 1.2
+
+    code
+        background highlight-background
+        padding 0.25rem 0.8rem
+        color #5670a0
+        margin 0 0.5rem
+        border-radius(0.4rem)
+
+    pre
+        @extend $code-block
+
+        code
+            background none
+            padding 0
+
+    .highlight
+        @extend $code-block
+
+        pre
+            border none
+            margin 0
+            padding 0
+
+        table
+            margin 0
+            width auto
+            border none
+
+        td
+            border none
+            padding 0
+
+        figcaption
+            clearfix()
+            font-size 85%
+            color highlight-comment
+            line-height 1rem
+            margin-bottom 1rem
+
+            a
+                float right
+
+        .gutter
+            -webkit-user-select none
+            -moz-user-select none
+            -ms-user-select none
+            user-select none
+
+        .gutter pre
+            @extend $line-numbers
+            text-align right
+            padding-right 1.5rem
+
+        .line
+            height inherit
+
+        .line.marked
+            background highlight-selection
+
+    .gist
+        background highlight-background
+
+        .gist-file
+            border none
+            margin 0
+
+            .gist-data
+                background none
+                border none
+
+                .line-numbers
+                    @extend $line-numbers
+                    background none
+                    border none
+
+                .line-data
+                    padding 0 !important
+
+            .highlight
+                margin 0
+                padding 0
+                border none
+
+            .gist-meta
+                background highlight-background
+                color highlight-comment
+                padding 0
+                margin-top 1rem
+
+                a
+                    font-weight normal
+
+                    &:hover
+                        text-decoration underline
+
+.hljs
+    display block
+    background white
+    padding 0.5em
+    color $color-1
+    overflow-x auto
+
+.hljs-comment, .hljs-meta
+    color $color-2
+
+.hljs-variable, .hljs-template-variable, .hljs-strong, .hljs-emphasis, .hljs-quote
+    color $color-3
+
+.hljs-keyword, .hljs-selector-tag, .hljs-type
+    color $color-4
+
+.hljs-literal, .hljs-symbol, .hljs-bullet, .hljs-attribute
+    color $color-5
+
+.hljs-section, .hljs-name
+    color $color-6
+
+.hljs-tag
+    color $color-1
+
+.hljs-title, .hljs-attr, .hljs-selector-id, .hljs-selector-class, .hljs-selector-attr, .hljs-selector-pseudo
+    color $color-7
+
+.hljs-addition
+    color $color-8
+    background-color $color-9
+
+.hljs-deletion
+    color $color-10
+    background-color $color-11
+
+.hljs-link
+    text-decoration underline
+
+.hljs-number
+    color $color-12
+
+.hljs-string
+    color $color-13

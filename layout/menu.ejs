@@ -1,6 +1,8 @@
 <nav id="menu">
     <script src="/js/menu.js"></script>
-    <span class="title"><%- config.title %> </span>
+    <a href="/">
+        <span class="title"><%- config.title %></span>
+    </a>
     <% Object.keys(theme.menu).forEach(key => { %>
     <a href="<%=theme.menu[key].src%>">
         <span>
