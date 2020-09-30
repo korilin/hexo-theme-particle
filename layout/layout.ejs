@@ -4,7 +4,7 @@
     else if(is_category()) pageTitle+=page.category;
     else if(is_tag()) pageTitle+=page.tag;
     else pageTitle+=config.subtitle;
-
+    // console.log(page)
     var layout = "index"
     if(is_home()){
         layout = "index"
@@ -16,6 +16,8 @@
         layout = "tags"
     }else if(is_archive()){
         layout = "archives"
+    }else {
+        layout = "post"
     }
 %>
 <!DOCTYPE html>

@@ -1,12 +1,12 @@
 <footer id="footer">
     <div class="footer-wrap">
         <div>
-            © <%= theme.footer.since %> - <%- date(Date.now(), 'YYYY') %>
+            © <%= theme.footer.since %> - <%- date(Date.now(), 'YYYY') %> <%= config.title %>
             <ion-icon style="color: #66afef; margin: 0 5px" name="planet"></ion-icon>
-            @ <%- config.author %>
+            @<%- config.author %>
         </div>
         <div></div>
-        <div>基于 Hexo & Particle 主题</div>
+        <div>Based on the <a href="https://hexo.io/">Hexo Engine</a> & <a href="">Particle Theme</a></div>
     </div>
 
 </footer>

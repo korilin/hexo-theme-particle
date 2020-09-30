@@ -1,15 +1,17 @@
 <link rel="stylesheet" href="/css/post.css">
 <div class="article">
+
     <div>
         <h1><%= page.title %> </h1>
     </div>
+    
     <div class="info">
         <span class="date">
             <ion-icon name="calendar-outline"></ion-icon>
             <%- date(page.date, 'YYYY/M/D') %>
         </span>
 
-        <% if(page.categories.data.length!=0){ %>
+        <% if(page.categories && page.categories.data.length!=0){ %>
         <span class="category">
             <a href="/categories/<%= page.categories.data[0].name %>">
                 <ion-icon name="layers"></ion-icon>
@@ -18,7 +20,7 @@
         </span>
         <% } %>
 
-        <% if(page.tags.data.length!=0){ %>
+        <% if(page.tags && page.tags.data.length!=0){ %>
 
         <span class="tags">
             <span class="tag-icon">
@@ -35,13 +37,10 @@
 
         <% }) %>
         <% } %>
-
-
     </div>
-    <div class="excerpt">
-        <div class="content">
-            <%- page.content %>
-        </div>
+
+    <div class="content">
+        <%- page.content %>
     </div>
 
 </div>
