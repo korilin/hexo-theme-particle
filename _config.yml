@@ -5,12 +5,22 @@ language: zh
 # icon use ionicons
 # Link：https://ionicons.com/
 menu:
-  主页:
+  home:
     icon: home
     src: /
-  关于:
+  about:
     icon: person
     src: /about
+  archives:
+    icon:  archive
+    src: /archives
+  categories:
+    icon: layers
+    src: /categories
+  tags:
+    icon: pricetags
+    src: /tags
+    
 
 link:
   Github:
@@ -32,6 +42,14 @@ home_img: /home_bg.jpg
 footer:
   since: 2018
 
+# Gitalk
+gitalk:
+  enable: true # true
+  clientID: 30daf96e536313585e82 # GitHub Application Client ID
+  clientSecret: c380eff4277e1a8e3efabd5fe82074c019d0ede9 # Client Secret
+  repo: korilin.cn.github.io # Repository name
+  owner: korilin # GitHub ID
+  admin: korilin # GitHub ID
 
 highlight:
   enable: true

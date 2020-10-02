@@ -9,12 +9,14 @@ window.addEventListener('scroll', function (e) {
     } else {
         menu.className = "show-menu"
     }
-    if (newLocal >= window.innerHeight - 80)
+    if (newLocal <= window.innerHeight - 80)
         menu.className += " menu-color"
-    if (newLocal <= 400) {
-        home_posts.style = "top:-" + newLocal / 5 + "px"
-    } else {
-        home_posts.style = "top:-80px"
+    if (home_posts) {
+        if (newLocal <= 400) {
+            home_posts.style = "top:-" + newLocal / 5 + "px"
+        } else {
+            home_posts.style = "top:-80px"
+        }
     }
     barLocal = newLocal
 })
