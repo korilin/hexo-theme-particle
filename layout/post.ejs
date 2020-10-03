@@ -2,7 +2,6 @@
 <link rel="stylesheet" href="/css/gitalk.min.css">
 <script src="/js/gitalk.min.js"></script>
 <div class="article">
-
     <div>
         <h1><%= page.title %> </h1>
     </div>
@@ -30,14 +29,16 @@
             </span>
             <% page.tags.data.forEach(function(data){%>
             <span class="tag">
-                <% var num = Math.floor(Math.random()*theme.tags_color.length) %>
-                <a href="/tags/<%= data.name %>" style="color: # <%- theme.tags_color[num] %> ">
+                <% 
+                var color = ['color:#ffa2c4', 'color:#00bcd4', 'color:#03a9f4', 'color:#00a596', 'color:#ff7d73'];
+                var num = Math.floor(Math.random()*color.length);
+                %>
+                <a href="/tags/<%= data.name %>" style=<%- color[num] %>>
                     <%- data.name %>
                 </a>
             </span>
+            <% }) %>
         </span>
-
-        <% }) %>
         <% } %>
     </div>
 

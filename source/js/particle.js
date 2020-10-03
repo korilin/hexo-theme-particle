@@ -9,9 +9,10 @@ window.addEventListener('scroll', function (e) {
     } else {
         menu.className = "show-menu"
     }
-    if (newLocal <= window.innerHeight - 80)
-        menu.className += " menu-color"
     if (home_posts) {
+
+        if (newLocal <= window.innerHeight - 100)
+            menu.className += " menu-color"
         if (newLocal <= 400) {
             home_posts.style = "top:-" + newLocal / 5 + "px"
         } else {

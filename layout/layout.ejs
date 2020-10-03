@@ -10,18 +10,18 @@
         layout = "index"
     }else if(is_post()){
         layout = "post"
-    }else if(is_category()){
+    }else if(is_category() || page.title=="categories"){
         layout = "categories"
-    }else if(is_tag()){
+    }else if(is_tag() || page.title=="tags"){
         layout = "tags"
-    }else if(is_archive()){
+    }else if(is_archive() || is_year() || is_month()){
         layout = "archives"
     }else {
         layout = "post"
     }
 %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%- config.language %> ">
 
 <head>
     <meta charset="UTF-8">
@@ -30,6 +30,7 @@
     <meta name="author" content="<%- config.author %> ">
     <% theme.stylesheets.forEach(url => { %>
     <meta name="description" content="<%- config.description %> ">
+    <% }); %>
     <% theme.stylesheets.forEach(url => { %>
     <link rel="stylesheet" href="<%=url%>">
     <% }); %>
