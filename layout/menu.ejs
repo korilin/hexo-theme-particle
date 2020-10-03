@@ -14,7 +14,38 @@
         <% }); %>
     </div>
 
-    <div class="phone-menu">
-
+    <div :class="'phone-menu ' + show" id="phone-menu">
+        <div :class="'title'" @click="show=!show">
+            <ion-icon name="grid"></ion-icon>
+            <%- config.title %>
+        </div>
+        <div class="items" v-show="show">
+            <% Object.keys(theme.menu).forEach(key => { %>
+            <a href="<%=theme.menu[key].src%>">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <ion-icon name="<%=theme.menu[key].icon %>"></ion-icon>
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;"><%=key%></div>
+                </div>
+            </a>
+            <% }); %>
+        </div>
+        <div class="curtain" v-show="show"></div>
     </div>
+
+    <script>
+        new Vue({
+            el: "#phone-menu",
+            data: {
+                show: false
+            },
+            mounted: function () {
+                var that = this
+                window.addEventListener('scroll', function (e) {
+                    that.show = false
+                })
+            },
+        })
+    </script>
 </nav>

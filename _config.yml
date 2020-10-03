@@ -12,7 +12,7 @@ menu:
     icon: person
     src: /about
   archives:
-    icon:  archive
+    icon: archive
     src: /archives
   categories:
     icon: layers
@@ -20,7 +20,6 @@ menu:
   tags:
     icon: pricetags
     src: /tags
-    
 
 link:
   Github:
@@ -44,16 +43,8 @@ gitalk:
   owner: korilin # GitHub ID
   admin: korilin # GitHub ID
 
-highlight:
-  enable: true
-  style: tomorrow
-
-prism:
-  enable: false
-
-# stylesheets loaded in the <head>
-stylesheets:
-  - /css/particle.css
+  # theme style: full / night , defalut: full
+  theme: full
 
 # scripts loaded in the end of the body
 scripts:

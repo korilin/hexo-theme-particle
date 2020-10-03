@@ -28,18 +28,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= pageTitle %></title>
     <meta name="author" content="<%- config.author %> ">
-    <% theme.stylesheets.forEach(url => { %>
     <meta name="description" content="<%- config.description %> ">
-    <% }); %>
-    <% theme.stylesheets.forEach(url => { %>
-    <link rel="stylesheet" href="<%=url%>">
-    <% }); %>
     <script type="module" src="/js/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="/js/ionicons.js"></script>
     <link rel="stylesheet" href="/css/element-ui.css">
     <script src="/js/vue.js"></script>
     <script src="/js/element-ui.js"></script>
-    <!-- <link rel="stylesheet" href="/css/particle.css"> -->
+    <% if(theme.style == "night"){ %>
+    <link rel="stylesheet" href="/css/full-theme.css">
+    <% }else{ %>
+    <link rel="stylesheet" href="/css/night-theme.css">
+    <% } %>
 </head>
 
 <body>

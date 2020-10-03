@@ -1,17 +1,18 @@
 
 #menu
-    z-index 103
+    user-select none
+    z-index 105
     position fixed
     width 100%
-    height 50px
     line-height 50px
-    padding 10px 0
     font-weight bold
     top 0px
     transition top 0.5s ease-out
     background menu-default-background
 
     .desktop-menu
+        height 50px
+
         .title
             display inline-block
             margin-left 80px
@@ -39,11 +40,54 @@
                 &:nth-child(1)
                     margin-right 5px
 
+    .phone-menu
+        min-height 50px
+        text-align center
+        transition all 0.3s ease-out
+
+        .title
+            cursor pointer
+            color menu-default-font
+
+            ion-icon
+                color menu-default-font
+
+        .items
+            padding 10px 0 20px
+            z-index 104
+            transition all 0.3s ease-out
+
+            a
+                color menu-default-font
+
+            .item
+                min-width 200px
+                width 80%
+                margin auto
+                display flex
+                justify-content center
+
+                &:hover
+                    background #ffffff80
+
+        .curtain
+            position fixed
+            z-index 104
+            width 100%
+            height 100%
+            background #0009
+
 .hidden-menu
     top -70px !important
 
 .menu-color
     background menu-index-background !important
 
-    .title, a
+    .false
+        background #00000033
+
+    .true
+        background #0009 !important
+
+    .title, a, ion-icon
         color menu-index-font !important
