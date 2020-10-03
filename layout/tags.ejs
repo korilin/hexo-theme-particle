@@ -1,1 +1,65 @@
-tag打算
+
+<div class="categories-tags">
+    <% var posts = []; %>
+    <div class="all-s">
+        <% site.tags.data.forEach(function(tag){ %>
+        <% 
+            var color = ['background:#ffa2c4', 'background:#00bcd4', 'background:#03a9f4', 'background:#00a596', 'background:#ff7d73'];
+            var num = Math.floor(Math.random()*color.length);
+        %>
+        <span>
+            <a href="/<%- tag.path %>" style=<%- color[num] %>>
+                <ion-icon name="pricetags"></ion-icon><%- tag.name %>
+            </a>
+        </span>
+        <% if(is_tag(tag.name)){posts = tag.posts} %>
+        <% }) %>
+    </div>
+    <div id="archives">
+        <% posts.forEach(function(post){ %>
+        <el-timeline>
+            <el-timeline-item timestamp="<%- date(post.date, 'YYYY/M/D') %>" placement="top" color="#a5c2f5">
+                <el-card shadow="hover">
+                    <a href="/<%- post.path %>">
+                        <h3><%= post.title %></h3>
+                    </a>
+                    <div class="info">
+                        <% if(post.categories && post.categories.data.length!=0){ %>
+                        <span class="category">
+                            <a href="/categories/<%= post.categories.data[0].name %>">
+                                <ion-icon name="layers"></ion-icon>
+                                <%- post.categories.data[0].name %>
+                            </a>
+                        </span>
+                        <% } %>
+
+                        <% if(post.tags && post.tags.data.length!=0){ %>
+                        <span class="tags">
+                            <span class="tag-icon">
+                                <ion-icon name="pricetags"></ion-icon>
+                            </span>
+                            <% post.tags.data.forEach(function(data){%>
+                            <span class="tag">
+                                <% 
+                                            var color = ['color:#ffa2c4', 'color:#00bcd4', 'color:#03a9f4', 'color:#00a596', 'color:#ff7d73'];
+                                            var num = Math.floor(Math.random()*color.length);
+                                        %>
+                                <a href="/tags/<%= data.name %>" style=<%- color[num] %>>
+                                    <%- data.name %>
+                                </a>
+                            </span>
+                            <% }) %>
+                        </span>
+                        <% } %>
+                    </div>
+                </el-card>
+            </el-timeline-item>
+        </el-timeline>
+        <% }) %>
+    </div>
+    <script>
+        new Vue({
+            el: '#archives'
+        })
+    </script>
+</div>

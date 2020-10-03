@@ -3,7 +3,7 @@ window.addEventListener('scroll', function (e) {
     var newLocal = document.documentElement.scrollTop
     var menu = document.getElementById("menu")
     var home_posts = document.getElementById("home-posts")
-
+    var footer = document.getElementById("footer")
     if (barLocal < newLocal) {
         menu.className = "hidden-menu"
     } else {
@@ -15,8 +15,10 @@ window.addEventListener('scroll', function (e) {
             menu.className += " menu-color"
         if (newLocal <= 400) {
             home_posts.style = "top:-" + newLocal / 5 + "px"
+            footer.style = "top:" + (150 - newLocal / 5) + "px"
         } else {
             home_posts.style = "top:-80px"
+            footer.style = "top:70px"
         }
     }
     barLocal = newLocal

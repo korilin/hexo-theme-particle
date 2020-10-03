@@ -12,18 +12,11 @@
     background-size cover
 
     .home-info
-        width 500px
-        height 500px
         position relative
         margin auto
 
-        .loop, .info
-            display inline-block
-            position absolute
-            width 500px
-            height 500px
-
         .info
+            position absolute
             display flex
             top -40px
             align-items center
@@ -114,22 +107,18 @@
 
 #home-posts
     position relative
-    width 800px
     background white
-    padding 30px 50px
     border-radius 10px
     z-index 101
     margin auto
 
     h2
         text-align center
-        color #66afef
+        color default-link
         text-decoration none
 
     .post
-        padding 50px 50px
         position relative
-        margin 25px 0
         border-radius 20px
         box-shadow 0 0 0 #0000001a
         transition box-shadow 0.5s ease-out
@@ -143,7 +132,7 @@
         .category-and-date
             width 100%
             margin-top 15px
-            color #5c6b72
+            color label-font
             text-align center
 
             ion-icon
@@ -156,14 +145,13 @@
                 margin-right 25px
 
                 a
-                    color #5c6b72
+                    color label-font
 
             .date
                 display inline-block
 
         .excerpt
-            color #1e3e3f
-            padding 20px 0
+            color text-font
 
         .post-tags
             a
@@ -174,14 +162,14 @@
                 ion-icon
                     position relative
                     top 3px
-                    color #5c6b72
+                    color label-font
 
                 display inline-block
                 margin-right 10px
                 font-weight bold
 
         .go-post
-            background linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)
+            background go-post
             border 0
             padding 10px 24px
             color white
@@ -236,5 +224,5 @@
             margin 0 7px
 
         .page-num:hover
-            background linear-gradient(120deg, #9fddfb 0, #ffdbef 100%)
+            background page-index-active
             color white

@@ -2,48 +2,48 @@
 #menu
     z-index 103
     position fixed
-    box-shadow 0.1rem 0.1rem 0.2rem var(--grey-9-a1)
-    width 100vw
+    width 100%
     height 50px
     line-height 50px
     padding 10px 0
     font-weight bold
     top 0px
     transition top 0.5s ease-out
-    background linear-gradient(120deg, #9fddfb 0, #ffdbef 100%)
+    background menu-default-background
 
-    .title
-        display inline-block
-        margin-left 80px
-        margin-right 20px
-        font-family 'Hensa'
-        text-transform uppercase
-        color #666
-
-    a
-        display inline-block
-        margin-left 30px
-        text-decoration none
-        color #666
-
-        span
+    .desktop-menu
+        .title
             display inline-block
-            position relative
+            margin-left 80px
+            margin-right 20px
+            font-family 'Hensa'
+            text-transform uppercase
+            color menu-default-font
 
-            img
+        a
+            display inline-block
+            margin-left 30px
+            text-decoration none
+            color menu-default-font
+
+            span
+                display inline-block
                 position relative
-                top 3px
-                width 20px
-                height 20px
 
-        span:nth-child(1)
-            margin-right 5px
+                img
+                    position relative
+                    top 3px
+                    width 20px
+                    height 20px
+
+                &:nth-child(1)
+                    margin-right 5px
 
 .hidden-menu
     top -70px !important
 
 .menu-color
-    background none !important
+    background menu-index-background !important
 
     .title, a
-        color white !important
+        color menu-index-font !important

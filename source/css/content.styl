@@ -6,11 +6,11 @@
 
     code
         font-family Cascadia
-        background #bddcf76b
+        background code-background
         padding 4px 8px
         border-radius 4px
         font-size 14px
-        color #4b616b
+        color code-font
 
     pre
         // background rgba(212, 235, 255, 0.161)
@@ -20,7 +20,6 @@
         margin 25px 0
         border-radius 15px
         overflow auto
-        color #4d4d4c
         position relative
 
         code
@@ -32,11 +31,12 @@
         margin 18px 0
 
     a
-        color #66afef
+        color default-link
         text-decoration none
 
     img
         display block
+        max-width 100%
         margin 0 auto
 
     .markdownIt-Anchor
@@ -46,10 +46,9 @@
         font-family Cascadia
         position absolute
         top 0
-        right 80px
         padding 10px 15px
-        background linear-gradient(to right, #ed6ea0 0, #ec8c69 100%)
-        box-shadow 0 0 0.75rem var(--color-pink-a3)
+        background code-tag
+        box-shadow 1px 1px 0.75rem code-tag-shadow
         color white
         font-weight bold
         font-size 12px
