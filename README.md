@@ -6,7 +6,11 @@
 
 ### 演示地址
 
-full 样式： korilin 的中文技术博客：https://cn.korilin.com
+**full 样式：**
+
+korilin 的中文技术博客：https://cn.korilin.com
+
+**night 样式：**
 
 night 样式：korillin 的英文技术博客：https://en.korilin.com
 
@@ -66,5 +70,3 @@ gitalk:
 
 # 主题样式，有 full 和 night 两种样式，不填或者填错默认为 full
 theme: full
-
-
