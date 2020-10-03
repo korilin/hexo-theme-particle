@@ -6,9 +6,9 @@
 
 ### 演示地址
 
-full 样式： korilin 的中文技术博客：cn.korilin.com
+full 样式： korilin 的中文技术博客：https://cn.korilin.com
 
-night 样式：korillin 的英文技术博客：en.korilin.com
+night 样式：korillin 的英文技术博客：https://en.korilin.com
 
 ### 配置文件说明
 
