@@ -1,9 +1,10 @@
 # html lang
 language: zh
 
-# main menu navigation
 # icon use ionicons
 # Link：https://ionicons.com/
+
+# main menu navigation
 menu:
   home:
     icon: home
@@ -20,12 +21,16 @@ menu:
   tags:
     icon: pricetags
     src: /tags
+  英文博客:
+      icon: link
 
 link:
   Github:
-    icon: /icon/github.png
+    type: ionicons
+    icon: logo-github
     src:
   Twitter:
+    type: image
     icon: /icon/twitter.png
     src:
 
