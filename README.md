@@ -69,4 +69,6 @@ gitalk:
   admin:  # 管理者的 GitHub ID / 和上面一样就好了
 
 # 主题样式，有 full 和 night 两种样式，不填或者填错默认为 full
-theme: full
+style: full
+
+```
