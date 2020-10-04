@@ -13,7 +13,7 @@ menu:
     icon: person
     src: /about
   archives:
-    icon: archive
+    icon: library
     src: /archives
   categories:
     icon: layers
@@ -22,7 +22,8 @@ menu:
     icon: pricetags
     src: /tags
   英文博客:
-      icon: link
+    icon: trail-sign
+    src: https:en.korilin.com
 
 link:
   Github:
@@ -49,7 +50,7 @@ gitalk:
   admin: korilin # GitHub ID
 
   # theme style: full / night , defalut: full
-  theme: full
+style: full
 
 # scripts loaded in the end of the body
 scripts:
