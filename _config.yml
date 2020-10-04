@@ -39,6 +39,9 @@ home_img: /home_bg.jpg
 
 footer:
   since: 2018
+  ICP:
+    enable: true
+    code: 粤ICP备19149652号
 
 # Gitalk
 gitalk:
