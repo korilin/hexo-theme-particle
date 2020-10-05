@@ -29,7 +29,7 @@ hljs.initHighlightingOnLoad();
 var pre_blocks = document.getElementsByTagName("pre")
 for (var i = 0; i < pre_blocks.length; i++) {
     var code_block_class = pre_blocks[i].firstChild.className
-    var language = code_block_class.substring(9,)
+    var language = code_block_class
     if (language == "") language = "Text"
     var language_html = "<div class='language'>" + language + "</div>"
     pre_blocks[i].innerHTML += language_html
