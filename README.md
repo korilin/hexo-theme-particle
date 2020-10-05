@@ -14,6 +14,15 @@ korilin 的中文技术博客：https://cn.korilin.com
 
 korillin 的英文技术博客：https://en.korilin.com
 
+### 主题安装
+
+进入主题目录后，克隆此仓库
+
+```cmd
+cd theme
+git clone https://github.com/korilin/hexo-theme-particle.git particle
+```
+
 ### 配置文件说明
 
 ``` yml
