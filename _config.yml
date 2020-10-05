@@ -25,16 +25,7 @@ menu:
     icon: trail-sign
     src: https:en.korilin.com
 
-link:
-  Github:
-    type: ionicons
-    icon: logo-github
-    src:
-  Twitter:
-    type: image
-    icon: /icon/twitter.png
-    src:
-
+head_img: /images/avatar.png
 home_img: /home_bg.jpg
 
 footer:
@@ -55,6 +46,24 @@ gitalk:
   # theme style: full / night , defalut: full
 style: full
 
+side_card:
+  enable: true
+  link:
+    Github:
+      icon: logo-github
+      src: https://github.com/korilin
+    Twitter:
+      icon: logo-twitter
+      src: https://twitter.com/korilin_dev
+  info:
+    email:
+      icon: mail
+      content: zqljiebin@gmail.com
+    wechat: 
+      icon:
+      content:
+  descript:
+  
 # scripts loaded in the end of the body
 scripts:
   - /js/particle.js
