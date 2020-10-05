@@ -37,11 +37,11 @@ footer:
 # Gitalk
 gitalk:
   enable: true # true
-  clientID: 30daf96e536313585e82 # GitHub Application Client ID
-  clientSecret: c380eff4277e1a8e3efabd5fe82074c019d0ede9 # Client Secret
-  repo: korilin.cn.github.io # Repository name
-  owner: korilin # GitHub ID
-  admin: korilin # GitHub ID
+  clientID:  # GitHub Application Client ID
+  clientSecret:  # Client Secret
+  repo:  # Repository name
+  owner:  # GitHub ID
+  admin:  # GitHub ID
 
   # theme style: full / night , defalut: full
 style: full
