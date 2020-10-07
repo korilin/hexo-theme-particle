@@ -1,8 +1,8 @@
 # html lang
 language: zh
 
-# icon use ionicons
-# Link：https://ionicons.com/
+# icon use ant design vue icon
+# Link：https://www.antdv.com/components/icon-cn/
 
 # main menu navigation
 menu:
@@ -42,6 +42,7 @@ home_img: /home_bg.jpg
 
 footer:
   since: 2018
+  # Customize the server domain name ICP
   ICP:
     enable: true
     code: 粤ICP备19149652号

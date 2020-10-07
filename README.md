@@ -29,37 +29,40 @@ git clone https://github.com/korilin/hexo-theme-particle.git particle
 
 language: 站点语言
 
-# 主题使用的图标为 ionicons 的图标， 图标官网地址为：https://ionicons.com/
+# 主题使用的图标为 Ant Design Vue 的图标， 图标官网地址为：https://www.antdv.com/components/icon-cn/
 
 # 导航栏链接
 menu:
-    链接文字(可中文可英文):
-        icon: ionicons图标名称
-        src: 链接地址(可站点内相对/绝对链接，或站点外绝对链接)
-    categories:
-        icon: layers
-        src: /categories
-    标签:
-        icon: pricetags
-        src: /tags
-    英文博客:
-        icon: link
-        src: https://en.korilin.com
-
-# 个人卡片链接
-link:
-    链接文字:
-        type: 图标类型(ionicons的图标或者自定义图标image)
-        icon: ionicons图标名称或图标图片地址
-        src: 链接地址
-    Github:
-        type: ionicons
-        icon: logo-github
-        src: https://github.com/korilin
-    Twitter:
-        type: image
-        icon: /icon/twitter.png
-        src: https://twitter.com/korilin_dev
+  链接名称:
+    icon:
+      type: 图表名字
+      theme: 图标主题
+    src: 链接地址
+  about:
+    icon:
+      type: home
+      theme: filled
+    src: /about
+  archives:
+    icon:
+      type: home
+      theme: filled
+    src: /archives
+  categories:
+    icon:
+      type: home
+      theme: filled
+    src: /categories
+  tags:
+    icon:
+      type: home
+      theme: filled
+    src: /tags
+  英文博客:
+    icon:
+      type: home
+      theme: filled
+    src: https:en.korilin.com
 
 # 主页图片
 home_img: /home_bg.jpg
