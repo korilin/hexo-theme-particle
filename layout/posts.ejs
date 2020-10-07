@@ -1,7 +1,7 @@
 <% var current = (page.current-1)*config.index_generator.per_page; %>
 <% site.posts.slice(0+current,config.index_generator.per_page+current).forEach(function(post){ %>
 <div class="post">
-    
+
     <a href="/<%- post.path %>">
         <h2>
             <%- post.title %>
@@ -13,14 +13,17 @@
         <% if(post.categories.data.length!=0){ %>
         <span class="category">
             <a href="/categories/<%= post.categories.data[0].name %>">
-                <ion-icon name="layers"></ion-icon>
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
                 <%- post.categories.data[0].name %>
             </a>
         </span>
         <% } %>
 
         <span class="date">
-            <ion-icon name="calendar-outline"></ion-icon>
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
             <%- date(post.date, 'YYYY/M/D') %>
         </span>
 
@@ -39,8 +42,8 @@
 
     <div class="post-tags">
         <% if(post.tags.data.length!=0){ %>
-        <span class="tag">
-            <ion-icon name="pricetags"></ion-icon>
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
         </span>
         <% } %>
         <% post.tags.data.forEach(function(data){%>

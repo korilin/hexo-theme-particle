@@ -3,7 +3,7 @@
         var menu = document.getElementById("menu")
         menu.className += " menu-color"
     </script>
-    <div id="home-info" class="home-info">
+    <div id="home-info" class="home-info" @click="home_click">
         <span class="loop"></span>
         <span class="loop"></span>
         <span class="loop"></span>
@@ -16,18 +16,6 @@
             </div>
         </span>
     </div>
-    <script>
-        var homeInfo = document.getElementById("home-info");
-
-        homeInfo.addEventListener('click', function () {
-            window.scrollTo({
-                top: window.innerHeight - 80,
-                behavior: "smooth",
-            });
-        })
-
-
-    </script>
 </div>
 
 <div id="home-posts-wrap">

@@ -7,22 +7,34 @@ language: zh
 # main menu navigation
 menu:
   home:
-    icon: home
+    icon:
+      type: home
+      theme: filled
     src: /
   about:
-    icon: person
+    icon:
+      type: home
+      theme: filled
     src: /about
   archives:
-    icon: library
+    icon:
+      type: home
+      theme: filled
     src: /archives
   categories:
-    icon: layers
+    icon:
+      type: home
+      theme: filled
     src: /categories
   tags:
-    icon: pricetags
+    icon:
+      type: home
+      theme: filled
     src: /tags
   英文博客:
-    icon: trail-sign
+    icon:
+      type: home
+      theme: filled
     src: https:en.korilin.com
 
 head_img: /images/avatar.png
@@ -37,15 +49,15 @@ footer:
 # Gitalk
 gitalk:
   enable: true # true
-  clientID:  # GitHub Application Client ID
-  clientSecret:  # Client Secret
-  repo:  # Repository name
-  owner:  # GitHub ID
-  admin:  # GitHub ID
+  clientID: # GitHub Application Client ID
+  clientSecret: # Client Secret
+  repo: # Repository name
+  owner: # GitHub ID
+  admin: # GitHub ID
 
   # theme style: full / night , defalut: full
 style: full
-  
+
 # scripts loaded in the end of the body
 scripts:
   - /js/particle.js

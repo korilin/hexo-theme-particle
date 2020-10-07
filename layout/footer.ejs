@@ -2,18 +2,18 @@
     <div class="footer-wrap">
         <div>
             © <%= theme.footer.since %> - <%- date(Date.now(), 'YYYY') %> <%= config.title %>
-            <ion-icon style="color: #66afef; margin: 0 5px" name="planet"></ion-icon>
+            <span class="footer-icon"><a-icon type="flag" theme="filled" /></span>
             @<%- config.author %>
         </div>
         <div></div>
         <div>Based on the <a href="https://hexo.io/">Hexo Engine</a> & <a href="">Particle Theme</a></div>
-        <% if(theme.footer.ICP.enable){ %> 
+        <% if(theme.footer.ICP.enable){ %>
         <div>
             备案号：<a href="http://beian.miit.gov.cn/">
-                <%- theme.footer.ICP.code %> 
+                <%- theme.footer.ICP.code %>
             </a>
         </div>
-        <% } %> 
+        <% } %>
     </div>
 
 </footer>

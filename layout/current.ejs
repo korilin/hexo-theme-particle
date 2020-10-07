@@ -4,7 +4,7 @@
         <% if(page.current!=1){ %>
         <a href="/<%- page.prev_link %>">
             <span class="page-num">
-                <ion-icon name="caret-back"></ion-icon>
+                <a-icon type="caret-left" theme="filled" />
             </span>
         </a>
         <% } %>
@@ -82,7 +82,7 @@
         <% if(page.current!=page.total){ %>
         <a href="/<%- page.next_link %> ">
             <span class="page-num">
-                <ion-icon name="caret-forward"></ion-icon>
+                <a-icon type="caret-right" theme="filled" />
             </span>
         </a>
         <% }%>

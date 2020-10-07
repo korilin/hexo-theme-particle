@@ -31,11 +31,9 @@
     <meta name="description" content="<%- config.description %> ">
     <meta name="keywords" content="<%- config.keywords %> ">
     <link rel="icon" href="<%- theme.head_img %> ">
-    <script type="module" src="/js/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="/js/ionicons.js"></script>
     <script src="/js/vue.js"></script>
-    <script src="/js/element-ui.js"></script>
-    <link rel="stylesheet" href="/css/element-ui.css">
+    <script src="/js/antd.min.js"></script>
+    <link rel="stylesheet" href="/css/antd.min.css">
     <% if(theme.style == "night"){ %>
     <link rel="stylesheet" href="/css/night-theme.css">
     <% }else{ %>
@@ -44,10 +42,34 @@
 </head>
 
 <body>
+    <div id="layout">
+        <%- include("menu") %>
+        <%- include(layout) %>
+        <%- include("footer") %>
 
-    <%- include("menu") %>
-    <%- include(layout) %>
-    <%- include("footer") %>
+    </div>
+    <script>
+        new Vue({
+            el: "#layout",
+            data: {
+                menu_show: false
+            },
+            mounted: function () {
+                var that = this
+                window.addEventListener('scroll', function (e) {
+                    that.menu_show = false
+                })
+            },
+            methods: {
+                home_click: function () {
+                    window.scrollTo({
+                        top: window.innerHeight - 80,
+                        behavior: "smooth",
+                    });
+                }
+            }
+        })
+    </script>
 </body>
 
 </html>

@@ -7,14 +7,18 @@
     </div>
     <div class="info">
         <span class="date">
-            <ion-icon name="calendar-outline"></ion-icon>
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
             <%- date(page.date, 'YYYY/M/D') %>
         </span>
 
         <% if(page.categories && page.categories.data.length!=0){ %>
         <span class="category">
             <a href="/categories/<%= page.categories.data[0].name %>">
-                <ion-icon name="layers"></ion-icon>
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
                 <%- page.categories.data[0].name %>
             </a>
         </span>
@@ -23,8 +27,8 @@
         <% if(page.tags && page.tags.data.length!=0){ %>
 
         <span class="tags">
-            <span class="tag-icon">
-                <ion-icon name="pricetags"></ion-icon>
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
             </span>
             <% page.tags.data.forEach(function(data){%>
             <span class="tag">
