@@ -1,0 +1,41 @@
+<a-affix :offset-top="card_top">
+    <a-card class="card-style" style="width: 300px">
+        <div class="avatar">
+            <img src="<%- theme.head_img %> " alt="头像">
+        </div>
+        <div class="name">
+            <%- config.author %>
+        </div>
+        <div class="descriptions">
+            <% theme.card.description.forEach(function(desc){ %>
+            <div class="description">
+                <%- desc %>
+            </div>
+            <% }) %>
+        </div>
+        <div class="icon-links">
+            <% Object.keys(theme.card.icon_links).forEach(function(key){ %>
+            <span class="icon-link">
+                <a href="<%- theme.card.icon_links[key].link %>">
+
+                    <% if (theme.card.icon_links[key].icon.type == 'antd-icon'){ %>
+                    <a-icon type="<%- theme.card.icon_links[key].icon.name %>"
+                        theme="<%- theme.card.icon_links[key].icon.theme %>" />
+                    <% }else{ %>
+                    <img width="18px" height="18px" src="<%- theme.card.icon_links[key].icon.src %> " alt="<%- key %>">
+                    <% } %>
+                </a>
+            </span>
+            <% }) %>
+        </div>
+        <div class="friend-links">
+            <% Object.keys(theme.card.friend_links).forEach(function(key){ %>
+            <div class="friend-link">
+                <a href="<%- theme.card.friend_links[key] %>">
+                    <%- key %>
+                </a>
+            </div>
+            <% }) %>
+        </div>
+    </a-card>
+</a-affix>

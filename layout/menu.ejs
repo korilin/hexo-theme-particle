@@ -7,7 +7,7 @@
         <% Object.keys(theme.menu).forEach(key => { %>
         <a href="<%=theme.menu[key].src%>">
             <span>
-                <a-icon type="<%- theme.menu[key].icon.type %>" theme="<%- theme.menu[key].icon.theme %>" />
+                <a-icon type="<%- theme.menu[key].icon.name %>" theme="<%- theme.menu[key].icon.theme %>" />
             </span>
             <span><%=key%></span>
         </a>
@@ -26,7 +26,7 @@
             <a href="<%=theme.menu[key].src%>">
                 <div class="item">
                     <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="<%- theme.menu[key].icon.type %>" theme="<%- theme.menu[key].icon.theme %>" />
+                        <a-icon type="<%- theme.menu[key].icon.name %>" theme="<%- theme.menu[key].icon.theme %>" />
                     </div>
                     <div style="min-width:100px;max-width: 150%;width: 20%;"><%=key%></div>
                 </div>

@@ -36,6 +36,8 @@
     <link rel="stylesheet" href="/css/antd.min.css">
     <% if(theme.style == "night"){ %>
     <link rel="stylesheet" href="/css/night-theme.css">
+    <% }else if(theme.style == "maiden"){ %>
+    <link rel="stylesheet" href="/css/maiden-theme.css">
     <% }else{ %>
     <link rel="stylesheet" href="/css/full-theme.css">
     <% } %>
@@ -52,7 +54,8 @@
         new Vue({
             el: "#layout",
             data: {
-                menu_show: false
+                menu_show: false,
+                card_top: 100,
             },
             mounted: function () {
                 var that = this

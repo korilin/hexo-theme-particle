@@ -1,4 +1,4 @@
-<div id="home-head">
+<div id="home-head" style=<%- theme.home_background %>>
     <script>
         var menu = document.getElementById("menu")
         menu.className += " menu-color"
@@ -21,10 +21,14 @@
 <div id="home-posts-wrap">
     <div id="home-posts">
 
-        <%- include("posts") %>
+        <div id="posts">
+            <%- include("posts") %>
 
-        <%- include("current") %>
-
+            <%- include("current") %>
+        </div>
     </div>
 
+    <div id="home-card">
+        <%- include("card") %>
+    </div>
 </div>

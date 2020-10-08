@@ -41,9 +41,16 @@
     ul, ol
         padding-left 40px
 
+    #home-posts-wrap
+        width 100%
+        max-width 1300px
+        min-width 900px
+        padding 30px 0
+
     #home-posts
         width 800px
-        padding 30px 50px
+        margin-left auto
+        margin-right 50px
 
         .post
             padding 50px 50px
@@ -51,6 +58,9 @@
 
             .excerpt
                 padding 20px 0
+
+    #home-card
+        margin-right auto
 
     .article
         width 900px
@@ -65,6 +75,18 @@
     footer
         .footer-wrap
             width 900px
+
+@media (min-width 900px) and (max-width 1200px)
+    #home-posts-wrap
+        width 900px
+        padding 30px 0
+
+    #home-posts
+        width 800px
+        margin auto
+
+    #home-card
+        display none
 
 @media (max-width 900px)
     #menu
@@ -124,12 +146,19 @@
             .el-card__body
                 padding 10px 20px
 
-    #home-posts
-        width 95%
+    #home-posts-wrap
         padding 20px 0
+        width 95%
+
+    #home-card
+        display none
+
+    #home-posts
+        margin auto
+        width 100%
 
         .post
-            padding 20px 50px
+            padding 20px 30px
             margin 30px 0
 
             .excerpt

@@ -1,0 +1,115 @@
+
+#home-posts-wrap
+    position relative
+    display flex
+    width 100%
+    background white
+    z-index 101
+    border-radius 10px
+    margin: auto
+
+#home-posts
+    position relative
+    background white
+    margin auto
+
+    h2
+        text-align center
+        color posts-title
+        text-decoration none
+
+    .post
+        position relative
+        border-radius 20px
+        box-shadow 1px 3px 10px rgba(0, 0, 0, 0.039)
+        transition box-shadow 0.4s ease-out
+
+        &:hover
+            box-shadow 3px 9px 20px rgba(0, 0, 0, 0.039)
+
+        a
+            text-decoration none
+
+        .category-and-date
+            width 100%
+            margin-top 15px
+            color label-font
+            text-align center
+
+            .category
+                display inline-block
+                margin-right 25px
+
+                a
+                    color label-font
+
+            .date
+                display inline-block
+
+        .excerpt
+            color text-font
+
+        .post-tags
+            a
+                color #ffbbf4
+                font-size 14px
+
+            .tag
+                display inline-block
+                margin-right 10px
+                font-weight bold
+
+        .go-post
+            background go-post
+            border 0
+            padding 10px 24px
+            color white
+            font-weight bold
+            border-radius 20px 0
+            font-size 14px
+            position absolute
+            bottom -5px
+            right -5px
+            transition all 0.2s ease-out
+            box-shadow 2px 2px 10px 0px go-post-shadow
+
+            &:hover
+                right -7px
+                box-shadow -2px -2px 10px 0px go-post-shadow-hover
+
+    .page-current
+        display flex
+        width 100%
+        align-items center
+        justify-content center
+        color #999999
+        margin-top 50px
+
+        .prev, .next
+            width 50px
+            text-align center
+
+        .page-index
+            width 300px
+            text-align center
+            font-weight blod
+
+        .current
+            color current-color
+
+        a
+            color #999999
+            text-decoration none
+
+        .page-num, .current, .page-omit
+            display inline-block
+            width 35px
+            height 35px
+            border-radius 5px
+            line-height 25px
+            padding 5px
+            margin 0 7px
+
+        .page-num:hover
+            background page-index-active
+            color white

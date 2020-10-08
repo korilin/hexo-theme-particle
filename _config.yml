@@ -1,45 +1,78 @@
+# Theme Github link: https://github.com/korilin/hexo-theme-particle
+# Developer: korilin
+
 # html lang
 language: zh
 
-# icon use ant design vue icon
+# avatar image url
+head_img: /images/avatar.png
+
+# home page head background style.
+# If you use a picture as background, you must use the css background-image attribute instead of the background attribute.
+# Use image as background ==> home_background: "background-image:url('../home.jpg')"
+# Use a color as background ==> home_background: "background: balck"
+home_background: "background-image:url('../home.jpg')"
+
+# Particle theme icon is adopts the ant design vue icons
 # Link：https://www.antdv.com/components/icon-cn/
 
 # main menu navigation
 menu:
   home:
     icon:
-      type: home
+      name: home
       theme: filled
     src: /
   about:
     icon:
-      type: home
+      name: idcard
       theme: filled
     src: /about
   archives:
     icon:
-      type: home
+      name: folder
       theme: filled
     src: /archives
   categories:
     icon:
-      type: home
+      name: book
       theme: filled
     src: /categories
   tags:
     icon:
-      type: home
+      name: tags
       theme: filled
     src: /tags
   英文博客:
     icon:
-      type: home
+      name: compass
       theme: filled
-    src: https:en.korilin.com
+    src: https://en.korilin.com
 
-head_img: /images/avatar.png
-home_img: /home_bg.jpg
+# side info card
+card:
+  enable: true
+  description: ["正しさなんてもの", "人のモノサシによって変わる"]
+  icon_links:
+    github:
+      icon:
+        type: antd-icon
+        name: github
+        theme: filled
+        src:
+      link: https://github.com/arukione
+    twitter:
+      icon:
+        type: antd-icon
+        name: twitter
+        theme:
+        src:
+      link: https://github.com/arukione
+  friend_links:
+    英文技术博客: https://en.korilin.com
+    日语记录博客: https://en.korilin.com
 
+# footer info
 footer:
   since: 2018
   # Customize the server domain name ICP
@@ -56,8 +89,8 @@ gitalk:
   owner: # GitHub ID
   admin: # GitHub ID
 
-  # theme style: full / night , defalut: full
-style: full
+  # theme style: full / night / maiden, defalut: full
+style: maiden
 
 # scripts loaded in the end of the body
 scripts:

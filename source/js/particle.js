@@ -2,22 +2,22 @@ var barLocal = document.documentElement.scrollTop
 window.addEventListener('scroll', function (e) {
     var newLocal = document.documentElement.scrollTop
     var menu = document.getElementById("menu")
-    var home_posts = document.getElementById("home-posts")
+    var home_posts_wrap = document.getElementById("home-posts-wrap")
     var footer = document.getElementById("footer")
     if (barLocal < newLocal) {
         menu.className = "hidden-menu"
     } else {
         menu.className = "show-menu"
     }
-    if (home_posts) {
+    if (home_posts_wrap) {
 
         if (newLocal <= window.innerHeight - 100)
             menu.className += " menu-color"
         if (newLocal <= 400) {
-            home_posts.style = "top:-" + newLocal / 5 + "px"
+            home_posts_wrap.style = "top:-" + newLocal / 5 + "px"
             footer.style = "top:" + (150 - newLocal / 5) + "px"
         } else {
-            home_posts.style = "top:-80px"
+            home_posts_wrap.style = "top:-80px"
             footer.style = "top:70px"
         }
     }
