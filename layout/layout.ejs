@@ -44,18 +44,36 @@
 </head>
 
 <body>
-    <div id="layout">
-        <%- include("menu") %>
-        <%- include(layout) %>
-        <%- include("footer") %>
 
+    <div id="layout">
+        <div v-show="show_page"><%- include("menu") %></div>
+        <div v-show="!show_page">
+            <a-spin>
+                <div>加载中...</div>
+            </a-spin>
+        </div>
+        <transition name="into">
+            <div v-show="show_page" id="main" style="display: none;">
+                <%- include(layout) %>
+                <%- include("footer") %>
+            </div>
+        </transition>
     </div>
+
     <script>
         new Vue({
             el: "#layout",
             data: {
+                show: false,
+                show_page: false,
                 menu_show: false,
                 card_top: 100,
+            },
+            created: function () {
+                var that = this
+                window.onload = function () {
+                    that.show_page = true
+                }
             },
             mounted: function () {
                 var that = this

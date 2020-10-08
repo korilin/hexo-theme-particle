@@ -22,8 +22,12 @@ body
     word-wrap break-word
 
 ul, ol
-    margin 15px 0
+    margin-top 15px !important
+    margin-bottom 10px !important
     line-height 1.7
+
+    li
+        margin 8px auto
 
 h1, h2, h3, h4, h5
     margin 15px 0
@@ -56,3 +60,38 @@ a
 .icon
     margin-right 5px
     color label-color
+
+.ant-spin, .ant-spin-container
+    height 100vh !important
+    width 100vw !important
+    display flex !important
+    max-height 100vw !important
+    align-items center
+    text-align center
+
+    div
+        width 100vw
+
+    .ant-spin-dot
+        position relative !important
+        top 0 !important
+        left 0 !important
+        text-align center
+        width 100px
+        display inline-block
+        margin auto !important
+
+.into-enter-active
+    animation into 0.6s
+
+.into-leave-active
+    animation into 0.6s
+
+@keyframes into
+    0%
+        opacity 0
+        transform scale(1.1)
+
+    100%
+        opacity 1
+        transform scale(1)
