@@ -7,6 +7,9 @@ language: zh
 # avatar image url
 head_img: /images/avatar.png
 
+# home page head info block
+head_block_enable: true
+
 # home page head background style.
 # If you use a picture as background, you must use the css background-image attribute instead of the background attribute.
 # Use image as background ==> home_background: "background-image:url('../home.jpg')"

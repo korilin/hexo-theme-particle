@@ -3,6 +3,7 @@
         var menu = document.getElementById("menu")
         menu.className += " menu-color"
     </script>
+    <% if(theme.head_block_enable){ %> 
     <div id="home-info" class="home-info" @click="home_click">
         <span class="loop"></span>
         <span class="loop"></span>
@@ -16,9 +17,17 @@
             </div>
         </span>
     </div>
+    <% } %> 
 </div>
 
-<div id="home-posts-wrap">
+<% 
+    var wrapClass = ""
+    if(!theme.card.enable){
+        wrapClass = "home-posts-wrap-no-card"
+    } 
+%>
+
+<div id="home-posts-wrap" class=<%- wrapClass %>>
     <div id="home-posts">
 
         <div id="posts">
@@ -27,8 +36,9 @@
             <%- include("current") %>
         </div>
     </div>
-
+    <% if(theme.card.enable){ %>
     <div id="home-card">
         <%- include("card") %>
     </div>
+    <% } %>
 </div>
