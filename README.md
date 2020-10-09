@@ -30,7 +30,10 @@ language: 站点语言
 # 站点图标 && 侧边信息卡片头像
 head_img: /images/avatar.png
 
-# 主页头部背景样式
+# 开启主页顶部信息块
+head_block_enable: true
+
+# 主页顶部背景样式
 # 如果使用图片来作为背景，请使用 background-image 属性，不要使用 background 属性。并且记得不要忘记加上双引号，否则可能会出现错误
 # 正确示例如下：
 # 图片背景： home_background: "background-image:url('../home.jpg')"
