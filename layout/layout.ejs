@@ -49,7 +49,10 @@
         <div v-show="show_page"><%- include("menu") %></div>
         <div v-show="!show_page">
             <a-spin>
-                <div>加载中...</div>
+                <div class="show_page_content">
+                    <div>加载中...</div>
+                    <div>"字体较大，请等待缓存"</div>
+                </div>
             </a-spin>
         </div>
         <transition name="into">
@@ -64,7 +67,6 @@
         new Vue({
             el: "#layout",
             data: {
-                show: false,
                 show_page: false,
                 menu_show: false,
                 card_top: 100,
