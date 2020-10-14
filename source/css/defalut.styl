@@ -94,10 +94,25 @@ a
 .into-leave-active
     animation into 0.6s
 
+.menu-into-enter-active
+    animation menu-into 0.3s linear
+
+.menu-into-leave-active
+    animation menu-into 0.3s liner
+
 @keyframes into
     0%
         opacity 0
         transform scale(1.1)
+
+    100%
+        opacity 1
+        transform scale(1)
+
+@keyframes menu-into
+    0%
+        opacity 0
+        transform scale(0.9)
 
     100%
         opacity 1
