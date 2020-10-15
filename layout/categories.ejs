@@ -44,7 +44,7 @@
                     <div class="info">
                         <% if(post.categories && post.categories.data.length!=0){ %>
                         <span class="category">
-                            <a href="/categories/<%= post.categories.data[0].name %>">
+                            <a href="/categories/<%= post.categories.data[0].name.replace(" ", "-") %>">
                                 <span class="icon">
                                     <a-icon type="book" theme="filled" />
                                 </span>
@@ -70,7 +70,7 @@
                                     }
                                     var num = Math.floor(Math.random()*color.length);
                                  %>
-                                <a href="/tags/<%= data.name %>" style=<%- color[num] %>>
+                                <a href="/tags/<%= data.name.replace(" ", "-") %>" style=<%- color[num] %>>
                                     <%- data.name %>
                                 </a>
                             </span>
