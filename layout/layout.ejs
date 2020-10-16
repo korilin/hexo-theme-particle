@@ -46,11 +46,13 @@
 <body>
 
     <div id="layout">
-        <transition name="menu-into">
-            <div id="menu_show" v-show="onload_menu">
-                <%- include("menu") %>
-            </div>
-        </transition>
+        <div id="get_menu" style="display: none;">
+            <transition name="menu-into">
+                <div id="menu_show" v-show="onload_menu">
+                    <%- include("menu") %>
+                </div>
+            </transition>
+        </div>
         <div v-show="!show_page">
             <a-spin>
                 <div class="show_page_content">
@@ -80,7 +82,10 @@
                 var that = this
                 window.onload = function () {
                     that.show_page = true
-                    window.setTimeout(that.onload_menu = true, 1600)
+                    document.getElementById("get_menu").style = "";
+                    window.setTimeout(function () {
+                        that.onload_menu = true;
+                    },400)
                 }
             },
             mounted: function () {

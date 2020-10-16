@@ -6,11 +6,17 @@
 
 ### 演示地址
 
-[korilin](https://korilin.com)
+**full 主题演示地址**
 
-或
+korilin 中文技术博客：<https://cn.korilin.com>
 
-[arukione](https://arukione.cn)
+**night 主题演示地址**
+
+korilin 英文技术博客：<https://en.korilin.com>
+
+**maiden 主题演示地址**
+
+こおり 日语记录博客：<https://jp.korilin.com>
 
 ### 主题安装
 
@@ -23,7 +29,7 @@ git clone https://github.com/korilin/hexo-theme-particle.git particle
 
 ### 配置文件说明
 
-``` yml
+``` yaml
 
 language: 站点语言
 
@@ -123,4 +129,54 @@ gitalk:
 
 # 主题样式，有 full、night 和 maiden 三种样式，不填或者填错默认为 full
 style: full # full | night | maiden
+```
+
+### 配色修改文件
+
+本主题采用 stylus 来编写样式，并且将配色分离出来，三种主题的配置对应 3 种配色，如有需要可以直接在主题的 css 目录中对应的配色文件修改配色
+
+主题的`source/css`目录下对应的 xxx-color.styl
+
+- full 主题配色文件：full-color.styl
+- ngiht 主题配色文件：night-color.styl
+- maiden 主题配色文件：maiden-color.styl
+
+本主题会根据主题配置文件的`style`配置项的值，在`source/layout/layout.ejs`中引入对应的样式文件`xxx-theme.styl`。
+主题的样式文件有很多，但最终都会被引入一个 theme 文件，其中`particle.styl`文件会引入除了配色文件外的所有样式文件，而`xxx-theme.styl`文件会引入`particle.styl`文件和对应的`xxx-color.styl`配色文件，从而达到切换样式的效果。
+
+因此，如果想保留主题提供的配色，引入新的配色，可以在 css 目录下，新建一个`new-theme.styl`（文件名可自己定）和`new-color.styl`（文件名可自己定）文件，然后在`new-theme.styl`文件里添加以下内容来引入`particle.styl`和`new-theme.styl`文件
+
+```stylus
+@import './new-color'
+@import './particle'
+```
+
+接着你需要在`source/layout/layout.ejs`里，添加类似下面的判断语句来引入新主题
+
+它如同 JavaScript 语法，但相关的语法就会 `<% %>`包裹起来
+
+```ejs
+<% if(theme.style == "new"){ %>
+  <link rel="stylesheet" href="/css/new-theme.css">
+<% } %>
+```
+
+你需要在`<head> ... </head>`中引入样式文件的配置文件判断语句部分进行修改，在添加full主题的`else`语句前，再添加一个`else if`判断语句来引入新主题，修改完的`laoyout.ejs`应和下面类似
+
+```ejs
+<% if(theme.style == "night"){ %>
+  <link rel="stylesheet" href="/css/night-theme.css">
+<% }else if(theme.style == "maiden"){ %>
+  <link rel="stylesheet" href="/css/maiden-theme.css">
+<% }else if(theme.style == "new"){ %>
+  <link rel="stylesheet" href="/css/new-theme.css">
+<% }else{ %>
+  <link rel="stylesheet" href="/css/full-theme.css">
+<% } %>
+```
+
+修改后，在主题的配置文件中`/themes/particle/_config.yml`中修改`style`配置项就可以切换新样式了
+
+```yaml
+style: new
 ```
