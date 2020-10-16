@@ -63,17 +63,17 @@ card:
         name: github
         theme: filled
         src:
-      link: https://github.com/arukione
+      link: https://github.com/korilin
     twitter:
       icon:
         type: antd-icon
         name: twitter
         theme:
         src:
-      link: https://github.com/arukione
+      link: https://twitter.com/korilin_dev
   friend_links:
     英文技术博客: https://en.korilin.com
-    日语记录博客: https://en.korilin.com
+    日语记录博客: https://jp.korilin.com
 
 # footer info
 footer:
