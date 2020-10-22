@@ -93,7 +93,7 @@ gitalk:
   admin: # GitHub ID
 
   # theme style: full / night / maiden, defalut: full
-style: full
+style: maiden
 
 # scripts loaded in the end of the body
 scripts:

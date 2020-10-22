@@ -43,6 +43,31 @@
         max-width 100%
         margin 0 auto
 
+    table
+        tr
+            th
+                padding 8px 20px
+                color th-font
+
+                &:nth-child(2n)
+                    background th-color-dual
+
+                &:nth-child(2n-1)
+                    background th-color-sing
+
+            td
+                padding 8px 20px
+
+                &:nth-child(2n)
+                    background td-color-dual
+
+                &:nth-child(2n-1)
+                    background td-color-sing
+
+        tbody
+            tr
+                border-top 2px solid white
+
     .markdownIt-Anchor
         display none
 
