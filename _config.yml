@@ -83,16 +83,18 @@ footer:
     enable: true
     code: 粤ICP备19149652号
 
-# Gitalk
-gitalk:
-  enable: true # true
-  clientID: # GitHub Application Client ID
-  clientSecret: # Client Secret
-  repo: # Repository name
-  owner: # GitHub ID
-  admin: # GitHub ID
-
-  # theme style: full / night / maiden, defalut: full
+# Valine
+# https://valine.js.org/configuration.html
+valine:
+  enable: true
+  appId: # your appId *
+  appKey: # your appKey *
+  placeholder: 我要吐槽
+  avatar: wavatar # https://valine.js.org/avatar.html
+  pageSize: 10
+  lang: zh-CN # zh-CN,zh-TW,en,ja
+  serverURLs: https://cn.korilin.com=
+# theme style: full / night / maiden, defalut: full
 style: maiden
 
 # scripts loaded in the end of the body
