@@ -45,26 +45,36 @@
 
 <body>
 
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="layout">
-        <div id="get_menu" style="display: none;">
-            <transition name="menu-into">
-                <div id="menu_show" v-show="onload_menu">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
                     <%- include("menu") %>
                 </div>
-            </transition>
-        </div>
-        <div v-show="!show_page">
-            <a-spin>
-                <div class="show_page_content">
-                    <div>加载中...</div>
-                    <div>"字体较大，请等待缓存"</div>
+
+                <div id="main">
+                    <%- include(layout) %>
+                    <%- include("footer") %>
                 </div>
-            </a-spin>
-        </div>
-        <transition name="into">
-            <div v-show="show_page" id="main" style="display: none;">
-                <%- include(layout) %>
-                <%- include("footer") %>
             </div>
         </transition>
     </div>
@@ -82,11 +92,16 @@
                 var that = this
                 window.onload = function () {
                     that.show_page = true
-                    document.getElementById("get_menu").style = "";
-                    window.setTimeout(function () {
-                        that.onload_menu = true;
-                    },400)
+                    document.getElementById("loadcontent").style.opacity = 0
+                    setTimeout(function () {
+                        document.getElementById("loadleft").style.width = 0
+                        document.getElementById("loadright").style.width = 0
+                    }, 300)
+                    setTimeout(function () {
+                        document.getElementById("loading").style = "display:none"
+                    }, 600)
                 }
+
             },
             mounted: function () {
                 var that = this
