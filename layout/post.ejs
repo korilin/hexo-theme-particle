@@ -53,24 +53,11 @@
         <%- page.content %>
     </div>
 
-    <% if(theme.valine.enable){ %>
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-    <div>
-        <div class="comment"></div>
-        <script>
-            comment_el = '#vcomments';
-            comment_count_el = 'span.comment-count';
-            new Valine({
-                av: AV,
-                el: '.comment',
-                app_id: '<% theme.valine.app_id %>',
-                app_key: '<% theme.valine.app_key %>',
-                placeholder: '<% theme.valine.placeholder %>',
-                avatar: '<% theme.valine.avatar %>',
-                lang: '<% theme.valine.lang %>'
-            }) 
-        </script>
+    <% if(theme.gitalk.enable){ %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
     </div>
     <% } %>
 </div>
