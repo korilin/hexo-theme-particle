@@ -1,6 +1,4 @@
 <link rel="stylesheet" href="/css/post-body.css">
-<link rel="stylesheet" href="/css/gitalk.min.css">
-<script src="/js/gitalk.min.js"></script>
 <div class="article">
     <div>
         <h1><%= page.title %> </h1>
@@ -56,22 +54,21 @@
     </div>
 
     <% if(theme.valine.enable){ %>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
     <div>
-        <div id="vcomments"></div>
-        <span id="comment-count"></span>
+        <div class="comment"></div>
         <script>
+            comment_el = '#vcomments';
             comment_count_el = 'span.comment-count';
             new Valine({
-                el: '#vcomments',
-                appKey: '<%- theme.valine.appKey %>',
-                appId: '<%- theme.valine.appId %>',
-                placeholder: '<%- theme.valine.placeholder %>',
-                avatar: '<%- theme.valine.avatar %> ',
-                pageSize: '<%- theme.valine.pageSize %> ',
-                lang: '<%- theme.valine.lang %> ',
-                serverURLs: '<%- theme.valine.serverURLs %> ',
-                requiredFields: ["nick", "mail"]
+                av: AV,
+                el: '.comment',
+                app_id: '<% theme.valine.app_id %>',
+                app_key: '<% theme.valine.app_key %>',
+                placeholder: '<% theme.valine.placeholder %>',
+                avatar: '<% theme.valine.avatar %>',
+                lang: '<% theme.valine.lang %>'
             }) 
         </script>
     </div>

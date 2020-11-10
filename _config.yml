@@ -87,13 +87,12 @@ footer:
 # https://valine.js.org/configuration.html
 valine:
   enable: true
-  appId: # your appId *
-  appKey: # your appKey *
+  app_id: # your appId *
+  app_key: # your appKey *
   placeholder: 我要吐槽
   avatar: wavatar # https://valine.js.org/avatar.html
-  pageSize: 10
   lang: zh-CN # zh-CN,zh-TW,en,ja
-  serverURLs: https://cn.korilin.com=
+
 # theme style: full / night / maiden, defalut: full
 style: maiden
 
