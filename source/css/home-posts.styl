@@ -6,7 +6,7 @@
     background white
     z-index 101
     border-radius 10px
-    margin: auto
+    margin auto
 
 #home-posts
     position relative
@@ -21,11 +21,16 @@
     .post
         position relative
         border-radius 20px
-        box-shadow 1px 3px 10px rgba(0, 0, 0, 0.039)
-        transition box-shadow 0.4s ease-out
+        // box-shadow 1px 3px 10px rgba(0, 0, 0, 0.039)
+        background #ffffff
+        box-shadow 0px -10px 20px #d9d9d9
+        transform translate3d(0, 0, 0)
+        transition all 0.4s ease-out
+
 
         &:hover
-            box-shadow 3px 9px 20px rgba(0, 0, 0, 0.039)
+            // box-shadow 0px -10px 5px #d9d9d9
+            transform translate3d(-5px, -5px, 0)
 
         a
             text-decoration none
