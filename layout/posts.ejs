@@ -1,6 +1,6 @@
 <% var current = (page.current-1)*config.index_generator.per_page; %>
 <% site.posts.slice(0+current,config.index_generator.per_page+current).forEach(function(post){ %>
-<div class="post" v-pre>
+<div class="post">
 
     <a href="/<%- post.path %>">
         <h2>
@@ -30,7 +30,7 @@
     </div>
 
     <div class="excerpt">
-        <div class="content">
+        <div class="content" v-pre>
             <% if(post.excerpt.length != 0){ %>
             <%- post.excerpt %>
             <% } %>

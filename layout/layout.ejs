@@ -4,7 +4,6 @@
     else if(is_category()) pageTitle+=page.category;
     else if(is_tag()) pageTitle+=page.tag;
     else pageTitle+=config.subtitle;
-    // console.log(page)
     var layout = "index"
     if(is_home()){
         layout = "index"
@@ -19,6 +18,10 @@
     }else {
         layout = "post"
     }
+
+    site.posts.data.sort(function(a, b){
+        return b.date - a.date;
+    })
 %>
 <!DOCTYPE html>
 <html lang="<%- config.language %> ">
