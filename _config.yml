@@ -80,8 +80,8 @@ footer:
   since: 2018
   # Customize the server domain name ICP
   ICP:
-    enable: true
-    code: 粤ICP备19149652号
+    enable: false
+    code: 
 
 # Gitalk
 # https://github.com/gitalk/gitalk

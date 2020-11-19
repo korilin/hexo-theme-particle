@@ -1,6 +1,6 @@
 <% var current = (page.current-1)*config.index_generator.per_page; %>
 <% site.posts.slice(0+current,config.index_generator.per_page+current).forEach(function(post){ %>
-<div class="post">
+<div class="post" v-pre>
 
     <a href="/<%- post.path %>">
         <h2>
