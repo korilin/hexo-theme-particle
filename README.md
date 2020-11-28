@@ -27,6 +27,33 @@ cd theme
 git clone https://github.com/korilin/hexo-theme-particle.git particle
 ```
 
+### 关闭 Hexo 自带 highlight
+
+到博客根目录下的`_config.yml`，将 highlight 下的 enable 设置为 false，如下：
+
+```yml
+# _config.yml
+highlight:
+  enable: false
+  line_number: true
+  auto_detect: false
+  tab_replace: ""
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ""
+```
+
+修改完请清除缓存
+
+```shell
+$ hexo cl
+$ hexo g
+```
+
 ### 配置文件说明
 
 ``` yaml
