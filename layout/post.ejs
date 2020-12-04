@@ -1,4 +1,5 @@
-<link rel="stylesheet" href="/css/post-body.css">
+<% var rootlink = config.root %> 
+<link rel="stylesheet" href="<%- rootlink %>css/post-body.css">
 <div class="article">
     <div>
         <h1><%= page.title %> </h1>
@@ -13,7 +14,7 @@
 
         <% if(page.categories && page.categories.data.length!=0){ %>
         <span class="category">
-            <a href="/categories/<%= page.categories.data[0].name.replace(" ", "-") %>">
+            <a href="<%- rootlink %>categories/<%= page.categories.data[0].name.replace(" ", "-") %>">
                 <span class="icon">
                     <a-icon type="book" theme="filled" />
                 </span>
@@ -40,7 +41,7 @@
                 }
                 var num = Math.floor(Math.random()*color.length);
                 %>
-                <a href="/tags/<%= data.name.replace(" ", "-") %>" style=<%- color[num] %>>
+                <a href="<%- rootlink %>tags/<%= data.name.replace(" ", "-") %>" style=<%- color[num] %>>
                     <%- data.name %>
                 </a>
             </span>

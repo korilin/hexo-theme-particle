@@ -5,7 +5,7 @@
 language: zh
 
 # avatar image url
-head_img: /images/avatar.png
+head_img: images/avatar.png
 
 # home page head info block
 head_block_enable: true
@@ -25,27 +25,27 @@ menu:
     icon:
       name: home
       theme: filled
-    src: /
+    src: 
   about:
     icon:
       name: idcard
       theme: filled
-    src: /about
+    src: about
   archives:
     icon:
       name: folder
       theme: filled
-    src: /archives
+    src: archives
   categories:
     icon:
       name: book
       theme: filled
-    src: /categories
+    src: categories
   tags:
     icon:
       name: tags
       theme: filled
-    src: /tags
+    src: tags
   英文博客:
     icon:
       name: compass
@@ -96,7 +96,3 @@ gitalk:
 
 # theme style: full / night / maiden, defalut: full
 style: maiden
-
-# scripts loaded in the end of the body
-scripts:
-  - /js/particle.js

@@ -18,7 +18,7 @@
     }else {
         layout = "post"
     }
-
+    var rootlink = config.root
     site.posts.data.sort(function(a, b){
         return b.date - a.date;
     })
@@ -30,20 +30,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= pageTitle %></title>
-    <meta name="author" content="<%- config.author %> ">
+    <meta name="author" content="<%- config.author %>">
     <meta name="description" content="<%- config.description %> ">
     <meta name="keywords" content="<%- config.keywords %> ">
-    <link rel="icon" href="<%- theme.head_img %> ">
-    <link rel="stylesheet" href="/css/antd.min.css">
+    <link rel="icon" href="<%- rootlink %><%- theme.head_img %>">
+    <link rel="stylesheet" href="<%- rootlink %>css/antd.min.css">
     <% if(theme.style == "night"){ %>
-    <link rel="stylesheet" href="/css/night-theme.css">
+    <link rel="stylesheet" href="<%- rootlink %>css/night-theme.css">
     <% }else if(theme.style == "maiden"){ %>
-    <link rel="stylesheet" href="/css/maiden-theme.css">
+    <link rel="stylesheet" href="<%- rootlink %>css/maiden-theme.css">
     <% }else{ %>
-    <link rel="stylesheet" href="/css/full-theme.css">
+    <link rel="stylesheet" href="<%- rootlink %>css/full-theme.css">
     <% } %>
-    <script src="/js/vue.js"></script>
-    <script src="/js/antd.min.js"></script>
+    <script src="<%- rootlink %>js/vue.js"></script>
+    <script src="<%- rootlink %>js/antd.min.js"></script>
 </head>
 
 <body>
@@ -60,7 +60,7 @@
                     <h2>LOADING...</h2>
                     <p>加载过慢请开启缓存(浏览器默认开启)</p>
                     <div>
-                        <img src="/dancingkitty.gif" alt="loading">
+                        <img src="<%- rootlink %>dancingkitty.gif" alt="loading">
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
         </transition>
     </div>
 
-    <%- include("script") %> 
+    <%- include("script") %>
 </body>
 
 </html>

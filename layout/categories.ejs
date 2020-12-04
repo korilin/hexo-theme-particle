@@ -1,3 +1,4 @@
+<% var rootlink = config.root %> 
 <div class="categories-tags">
     <% var posts = [];%>
     <div class="all-s">
@@ -23,7 +24,7 @@
             var num = Math.floor(Math.random()*color.length);
         %>
         <span>
-            <a href="/<%- category.path %>" style=<%- color[num] %>>
+            <a href="<%- rootlink %><%- category.path %>" style=<%- color[num] %>>
                 <span class="icon">
                     <a-icon type="book" theme="filled" /></span>
                 <%- category.name %>
@@ -38,13 +39,13 @@
             <a-timeline-item timestamp="<%- date(post.date, 'YYYY/M/D') %>" placement="top" color="#a5c2f5">
                 <a-card hoverable>
                     <div class="item-time"><%- date(post.date, 'YYYY/M/D') %></div>
-                    <a href="/<%- post.path %>">
+                    <a href="<%- rootlink %><%- post.path %>">
                         <h3><%= post.title %></h3>
                     </a>
                     <div class="info">
                         <% if(post.categories && post.categories.data.length!=0){ %>
                         <span class="category">
-                            <a href="/categories/<%= post.categories.data[0].name.replace(" ", "-") %>">
+                            <a href="<%- rootlink %>categories/<%= post.categories.data[0].name.replace(" ", "-") %>">
                                 <span class="icon">
                                     <a-icon type="book" theme="filled" />
                                 </span>
@@ -70,7 +71,7 @@
                                     }
                                     var num = Math.floor(Math.random()*color.length);
                                  %>
-                                <a href="/tags/<%= data.name.replace(" ", "-") %>" style=<%- color[num] %>>
+                                <a href="<%- rootlink %>tags/<%= data.name.replace(" ", "-") %>" style=<%- color[num] %>>
                                     <%- data.name %>
                                 </a>
                             </span>

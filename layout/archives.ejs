@@ -1,16 +1,17 @@
+<% var rootlink = config.root %>
 <div id="archives">
     <% site.posts.forEach(function(post){ %>
     <a-timeline>
         <a-timeline-item timestamp="<%- date(post.date, 'YYYY/M/D') %>" placement="top" color="#a5c2f5">
             <a-card hoverable>
                 <div class="item-time"><%- date(post.date, 'YYYY/M/D') %></div>
-                <a href="/<%- post.path %>">
+                <a href="<%- rootlink %><%- post.path %>">
                     <h3><%= post.title %></h3>
                 </a>
                 <div class="info">
                     <% if(post.categories && post.categories.data.length!=0){ %>
                     <span class="category">
-                        <a href="/categories/<%= post.categories.data[0].name.replace(" ", "-") %>">
+                        <a href="<%- rootlink %>categories/<%= post.categories.data[0].name.replace(" ", "-") %>">
                             <span class="icon"><a-icon type="book" theme="filled" /></span>
                             <%- post.categories.data[0].name %>
                         </a>
@@ -34,7 +35,7 @@
                                     }
                                     var num = Math.floor(Math.random()*color.length);
                                 %>
-                            <a href="/tags/<%= data.name.replace(" ", "-") %>" style=<%- color[num] %>>
+                            <a href="<%- rootlink %>tags/<%= data.name.replace(" ", "-") %>" style=<%- color[num] %>>
                                 <%- data.name %>
                             </a>
                         </span>

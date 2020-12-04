@@ -1,8 +1,11 @@
-<% var current = (page.current-1)*config.index_generator.per_page; %>
+<% 
+var current = (page.current-1)*config.index_generator.per_page; 
+var rootlink = config.root;
+%>
 <% site.posts.slice(0+current,config.index_generator.per_page+current).forEach(function(post){ %>
 <div class="post">
 
-    <a href="/<%- post.path %>">
+    <a href="<%- rootlink %><%- post.path %>">
         <h2>
             <%- post.title %>
         </h2>
@@ -12,7 +15,7 @@
 
         <% if(post.categories.data.length!=0){ %>
         <span class="category">
-            <a href="/categories/<%= post.categories.data[0].name.replace(" ", "-") %>">
+            <a href="<%- rootlink %>categories/<%= post.categories.data[0].name.replace(" ", "-") %>">
                 <span class="icon">
                     <a-icon type="book" theme="filled" /></span>
                 <%- post.categories.data[0].name %>
@@ -58,14 +61,14 @@
             }
             var num = Math.floor(Math.random()*color.length);
             %>
-            <a href="/tags/<%= data.name.replace(" ", "-") %>" style=<%- color[num] %>>
+            <a href="<%- rootlink %>tags/<%= data.name.replace(" ", "-") %>" style=<%- color[num] %>>
                 <%- data.name %>
             </a>
         </span>
         <% }) %>
     </div>
 
-    <a href="/<%- post.path %> " class="go-post">
+    <a href="<%- rootlink %><%- post.path %> " class="go-post">
         阅读全文
     </a>
 </div>
