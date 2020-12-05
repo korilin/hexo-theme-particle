@@ -40,7 +40,7 @@ menu:
     icon:
       name: book
       theme: filled
-    src: /like/categories # 当你的博客root不为 ‘/’，而是其它时，例如 '/like/'
+    src: /like/categories # 当你的博客root不为 '/'，而是其它时，例如 '/like/'
   tags:
     icon:
       name: tags
