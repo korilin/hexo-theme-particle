@@ -1,8 +1,7 @@
-<% var rootlink = config.root %>
 <a-affix :offset-top="card_top">
     <a-card class="card-style" style="width: 300px">
         <div class="avatar">
-            <img src="<%- rootlink %><%- theme.head_img %> " alt="头像">
+            <img src="<%- theme.head_img %> " alt="头像">
         </div>
         <div class="name">
             <%- config.author %>
@@ -17,7 +16,7 @@
         <div class="icon-links">
             <% Object.keys(theme.card.icon_links).forEach(function(key){ %>
             <span class="icon-link">
-                <a href="<%- rootlink %><%- theme.card.icon_links[key].link %>">
+                <a href="<%- theme.card.icon_links[key].link %>">
 
                     <% if (theme.card.icon_links[key].icon.type == 'antd-icon'){ %>
                     <a-icon type="<%- theme.card.icon_links[key].icon.name %>"
