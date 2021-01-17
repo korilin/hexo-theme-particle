@@ -4,6 +4,12 @@
 
 目前有 full、night 和 maiden 两个主题样式
 
+### 重要！
+
+由于Hexo的主题开发体验过差，以及本主题代码质量也不高，个人博客不再使用Hexo了，已经迁移至VuePress，并采用个人开发的新主题[vuepress-theme-twipress](https://github.com/korilin/vuepress-theme-twipress)，
+
+博客地址：<https://korilin.com/>
+
 ### 演示地址
 
 **full 主题演示地址**
