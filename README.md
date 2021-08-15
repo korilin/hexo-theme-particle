@@ -6,7 +6,7 @@
 
 ### 重要！
 
-个人博客不再使用Hexo了，已经迁移至VuePress，并采用个人开发的新主题[vuepress-theme-twipress](https://github.com/korilin/vuepress-theme-twipress)，
+个人博客不再使用Hexo了，已经迁移至VuePress
 
 博客地址：<https://korilin.com/>
 
