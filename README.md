@@ -6,7 +6,7 @@
 
 ### 重要！
 
-个人博客不再使用Hexo了，已经迁移至VuePress
+个人博客不再使用 Hexo 了，已经迁移至 VuePress，因此本主题不会再进行维护，但应该还是可以使用地，可能~
 
 博客地址：<https://korilin.com/>
 
@@ -14,15 +14,15 @@
 
 **full 主题演示地址**
 
-korilin 中文技术博客：<https://cn.korilin.com>
+korilin 中文技术博客：<https://korilin.github.io/hexo-theme-particle-demo/full/public/>
 
 **night 主题演示地址**
 
-korilin 英文技术博客：<https://en.korilin.com>
+korilin 英文技术博客：<https://korilin.github.io/hexo-theme-particle-demo/night/public/>
 
 **maiden 主题演示地址**
 
-こおり 日语记录博客：<https://jp.korilin.com>
+こおり 日语记录博客：<https://korilin.github.io/hexo-theme-particle-demo/maiden/public/>
 
 ### 主题安装
 
