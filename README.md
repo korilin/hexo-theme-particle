@@ -8,7 +8,9 @@
 
 个人博客不再使用 Hexo 了，已经迁移至 VuePress，因此本主题不会再进行维护，但应该还是可以使用地，可能~
 
-博客地址：<https://korilin.com/>
+各位如果希望继续使用这个主题，可以看看这个：https://github.com/argvchs/hexo-theme-particlex
+
+我的博客地址：<https://korilin.com/>
 
 ### 演示地址（可访问）
 
