@@ -4,11 +4,11 @@
 
 目前有 full、night 和 maiden 两个主题样式
 
-### 重要！
+### 停止维护
 
-个人博客不再使用 Hexo 了，因此本主题不会再进行维护，但应该还是可以使用地，可能~
+个人博客不再使用 Hexo 了，因此本主题不会再进行维护，但应该还是可以使用的，可能~
 
-各位如果希望继续使用这个主题，可以看看这个：https://github.com/argvchs/hexo-theme-particlex
+各位如果希望继续使用这个主题，可以看看这个项目：https://github.com/argvchs/hexo-theme-particlex
 
 我的博客地址：<https://korilin.com/>
 
